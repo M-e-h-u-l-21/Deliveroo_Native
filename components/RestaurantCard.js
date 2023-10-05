@@ -20,7 +20,18 @@ const RestaurantCard = ({
   return (
     <TouchableOpacity 
     onPress={()=>{
-      navigation.navigate("Restaurant")
+      navigation.navigate("Restaurant", {
+        id,
+        imgUrl,
+        title,
+        rating,
+        genre,
+        address,
+        short_description,
+        dishes,
+        long,
+        lat,
+      })
     }}
     className="bg-white mr-3  shadow">
       <Image
